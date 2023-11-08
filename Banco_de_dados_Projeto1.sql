@@ -20,6 +20,32 @@ insert into clientes values
 
 select * from clientes;
 
+# renomear tabela
 alter table clientes rename to pessoas;
+# retornando
+alter table pessoas rename to clientes;
+
+# adiciona uma coluna no final da tabela. O parametro column é opcional
+alter table clientes add column proficao varchar(10);
+
+# adicianando uma coluna em um lugar especifico da tabela 
+alter table clientes add column proficao varchar(10) after nome;
+
+# adiciona uma coluna no inicio da tabela em um lugar especifico
+alter table clientes add column proficao varchar(10) first;
+
+# apaga uma coluna da tabela. O parametro column é opcional
+alter table clientes drop column proficao;
+
+# Modifica o tipo primitivo e os parametros em uma coluna da tabela 
+alter table clientes modify column proficao varchar(20) not null default'';
+
+# Modifica o nome e todas as especificações da coluna da tabela 
+alter table clientes change column proficao prof varchar(20);
+
+# mostar tabela
+describe pessoas;
+# ou
+desc pessoas;
 
 
