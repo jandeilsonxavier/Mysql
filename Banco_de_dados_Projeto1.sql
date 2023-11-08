@@ -57,5 +57,8 @@ ano year default '2016'
 ) default charset=utf8;
 
 alter table cursos add column idcurso int first;
+
 # Aciciona uma chave primaria na tabela
 alter table cursos add primary key(idcurso);
+
+select * from pessoas;
