@@ -13,11 +13,19 @@ nacionalidade varchar(20) default 'Brasil',
 primary key (id)
 )default charset utf8;
 
+select * from cursos;
 select * from pessoas;
+select * from gafanhotos;
+describe cursos;
+show tables;
 
-insert into clientes values
-(default, 'Jhon', '2000-08-30', 'M', '100.3', '1.85', 'EUA'),
-(default, 'Clara', '2004-01-3', 'F', '59', '1.69', 'Brasil'),
-(default, 'João', '1995-12-2', 'M', '80', '1.78', 'Espanha');
+insert into cursos values
+('1', 'PHP', '','20', '12', '2016'),
+('2', 'Java', '', '40', '15', '2018'),
+('3', 'Python', '', '80', '24', '2017');
 
-update pessoas set nome = 'Ana' where id = '4';
+update cursos set nome = 'HTML' where idcurso = '1';
+update cursos set descricao = 'curso antigo' where ano = '2017' limit 1;
+
+delete from cursos where idcurso = '1';
+
